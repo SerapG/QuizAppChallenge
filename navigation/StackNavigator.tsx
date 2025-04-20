@@ -21,24 +21,22 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function StackNavigator() {
   return (
     // NavigationContainer wraps the entire navigation system
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen
-          name="Home"
-          component={HomeScreen}
-          options={{ title: 'Quiz Kategorileri' }}
-        />
-        <Stack.Screen
-          name="Quiz"
-          component={QuizScreen}
-          options={{ title: 'Sorular' }}
-        />
-        <Stack.Screen
-          name="Result"
-          component={ResultScreen}
-          options={{ title: 'Sonuçlar' }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{ title: 'Quiz Kategorileri' }}
+      />
+      <Stack.Screen
+        name="Quiz"
+        component={QuizScreen}
+        options={{ title: 'Sorular' }}
+      />
+      <Stack.Screen
+        name="Result"
+        component={ResultScreen}
+        options={{ title: 'Sonuçlar' }}
+      />
+    </Stack.Navigator>
   );
 }
